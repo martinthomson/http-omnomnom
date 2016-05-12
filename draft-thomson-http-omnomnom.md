@@ -69,8 +69,8 @@ interpreted as described in [RFC2119].
 # Expire Cookies
 
 Cookies that are set using insecure channels (i.e., HTTP over cleartext TCP),
-MUST be given shorter expiration times than the time requested.  For instance,
-these cookies might only persist until the user closes their browser.
+MUST have a short time limit on the time that they are persisted.   For
+instance, such cookies might only persist until the user closes their browser.
 
 If a user agent detects a change in network conditions it SHOULD remove any
 cookies that were established using insecure channels.
