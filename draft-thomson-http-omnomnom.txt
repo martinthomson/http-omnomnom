@@ -84,8 +84,9 @@ Table of Contents
    requests.  The information that a cookie holds might also be valuable
    to that attacker in some way.
 
-   This document recommends limitations on the persistence of cookies
-   that are set over insecure connections.
+   To limit the effectiveness of attacks on cleartext communications
+   [RFC7258], user agents are encouraged to limit the persistence of
+   cookies that are set over insecure connections.
 
 1.1.  Notational Conventions
 
@@ -104,7 +105,6 @@ Table of Contents
    remove any cookies that were established using insecure channels.
 
    Alternatives:
-
 
 
 
@@ -176,6 +176,10 @@ Internet-Draft              EAT HTTP Cookies                    May 2016
               DOI 10.17487/RFC2818, May 2000,
               <http://www.rfc-editor.org/info/rfc2818>.
 
+   [RFC7258]  Farrell, S. and H. Tschofenig, "Pervasive Monitoring Is an
+              Attack", BCP 188, RFC 7258, DOI 10.17487/RFC7258, May
+              2014, <http://www.rfc-editor.org/info/rfc7258>.
+
 Appendix A.  Acknowledgements
 
    Chris Peterson did much of the initial investigation and work for
@@ -188,10 +192,6 @@ Author's Address
    Mozilla
 
    Email: martin.thomson@gmail.com
-
-
-
-
 
 
 
