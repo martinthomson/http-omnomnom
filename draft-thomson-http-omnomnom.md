@@ -27,6 +27,7 @@ normative:
 
 informative:
   RFC2818:
+  RFC7258:
 
 --- abstract
 
@@ -48,7 +49,8 @@ situation might change over time.  As persistent state, cookies create a way for
 an attacker to link requests.  The information that a cookie holds might also be
 valuable to that attacker in some way.
 
-This document recommends limitations on the persistence of cookies that are set
+To limit the effectiveness of attacks on cleartext communications [RFC7258],
+user agents are encouraged to limit the persistence of cookies that are set
 over insecure connections.
 
 
