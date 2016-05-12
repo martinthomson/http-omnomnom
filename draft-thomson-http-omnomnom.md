@@ -115,5 +115,6 @@ This document makes no request of IANA.
 
 # Acknowledgements
 
-Chris Peterson did much of the initial investigation and work for this.  See
+Henri Sivonen first suggested that non-Secure cookies be made ephemeral.
+Chris Peterson did much of the initial investigation and work.  See
 <eref target="https://bugzilla.mozilla.org/show_bug.cgi?id=1160368"/> for details.
