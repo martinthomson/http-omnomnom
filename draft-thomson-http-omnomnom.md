@@ -19,6 +19,11 @@ author:
     name: Martin Thomson
     organization: Mozilla
     email: martin.thomson@gmail.com
+ -
+    ins: C. Peterson
+    name: Chris Peterson
+    organization: Mozilla
+    email: cpeterson@mozilla.com
 
 normative:
   RFC2119:
