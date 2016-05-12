@@ -85,6 +85,11 @@ Alternatives:
 * This change might be limited to cookies that are set in third-party contexts.
   See [I-D.west-first-party-cookies].
 
+  Limiting access to third-party cookies in this fashion could have the
+  secondary effect of encouraging providers of third-party content to move to
+  HTTPS.  This removes that content as a barrier to the adoption of HTTPS for
+  the sites that include that content.
+
 
 # Security Considerations
 
