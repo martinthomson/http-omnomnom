@@ -283,7 +283,7 @@ li, p {
   <meta name="generator" content="xml2rfc version 2.5.1 - http://tools.ietf.org/tools/xml2rfc" />
   <link rel="schema.dct" href="http://purl.org/dc/terms/" />
 
-  <meta name="dct.creator" content="Thomson, M." />
+  <meta name="dct.creator" content="Thomson, M. and C. Peterson" />
   <meta name="dct.identifier" content="urn:ietf:id:draft-thomson-http-omnomnom-latest" />
   <meta name="dct.issued" scheme="ISO8601" content="2016-5-12" />
   <meta name="dct.abstract" content="HTTP Cookies that are sent over connections without confidentiality and integrity protection are vulnerable to theft.  Such cookies should be expired aggressively." />
@@ -302,15 +302,15 @@ li, p {
 </tr>
 <tr>
   <td class="left">Internet-Draft</td>
-  <td class="right">Mozilla</td>
+  <td class="right">C. Peterson</td>
 </tr>
 <tr>
   <td class="left">Intended status: Standards Track</td>
-  <td class="right">May 12, 2016</td>
+  <td class="right">Mozilla</td>
 </tr>
 <tr>
   <td class="left">Expires: November 13, 2016</td>
-  <td class="right"></td>
+  <td class="right">May 12, 2016</td>
 </tr>
 
     	
@@ -351,7 +351,7 @@ li, p {
 <ul><li>5.1.   <a href="#rfc.references.1">Normative References</a></li>
 <li>5.2.   <a href="#rfc.references.2">Informative References</a></li>
 </ul><li>Appendix A.   <a href="#rfc.appendix.A">Acknowledgements</a></li>
-<li><a href="#rfc.authors">Author's Address</a></li>
+<li><a href="#rfc.authors">Authors' Addresses</a></li>
 
 
   </ul>
@@ -363,14 +363,14 @@ li, p {
 <h2 id="rfc.section.1.1"><a href="#rfc.section.1.1">1.1.</a> <a href="#notational-conventions" id="notational-conventions">Notational Conventions</a></h2>
 <p id="rfc.section.1.1.p.1">The key words &#8220;MUST&#8221;, &#8220;MUST NOT&#8221;, &#8220;REQUIRED&#8221;, &#8220;SHALL&#8221;, &#8220;SHALL NOT&#8221;, &#8220;SHOULD&#8221;, &#8220;SHOULD NOT&#8221;, &#8220;RECOMMENDED&#8221;, &#8220;MAY&#8221;, and &#8220;OPTIONAL&#8221; in this document are to be interpreted as described in <a href="#RFC2119">[RFC2119]</a>.</p>
 <h1 id="rfc.section.2"><a href="#rfc.section.2">2.</a> <a href="#expire-cookies" id="expire-cookies">Expire Cookies</a></h1>
-<p id="rfc.section.2.p.1">Cookies that are set using insecure channels (i.e., HTTP over cleartext TCP), MUST be given shorter expiration times than the time requested.  For instance, these cookies might only persist until the user closes their browser.</p>
+<p id="rfc.section.2.p.1">Cookies that are set using insecure channels (i.e., HTTP over cleartext TCP), MUST have a short time limit on the time that they are persisted.   For instance, such cookies might only persist until the user closes their browser.</p>
 <p id="rfc.section.2.p.2">If a user agent detects a change in network conditions it SHOULD remove any cookies that were established using insecure channels.</p>
 <p id="rfc.section.2.p.3">Alternatives:</p>
 <p/>
 
 <ul>
   <li>In the investigation into this change, it was suggested that cookies without the &#8220;Secure&#8221; flag might be given the same treatment.  However, this resulted in a far greater number of cookies being affected and some interoperability problems as a result.</li>
-  <li>This change might be limited to cookies that are set in third-party contexts.  See [I-D.west-first-party-cookies].</li>
+  <li>This change might be limited to cookies that are set in third-party contexts.  See [I-D.west-first-party-cookies].  <br/><br/> Limiting access to third-party cookies in this fashion could have the secondary effect of encouraging providers of third-party content to move to HTTPS.  This removes that content as a barrier to the adoption of HTTPS for the sites that include that content.</li>
 </ul>
 <h1 id="rfc.section.3"><a href="#rfc.section.3">3.</a> <a href="#security-considerations" id="security-considerations">Security Considerations</a></h1>
 <p id="rfc.section.3.p.1">This document describes an improvement that could be a security improvement.  However, this is not without risks.  For cookies that are used as a substitute for logins, more regular clearing of a login cookie could expose the primary authentication token (for instance, a password) to more network attackers as a result of being entered more often.</p>
@@ -420,9 +420,9 @@ li, p {
   </tbody>
 </table>
 <h1 id="rfc.appendix.A"><a href="#rfc.appendix.A">Appendix A.</a> <a href="#acknowledgements" id="acknowledgements">Acknowledgements</a></h1>
-<p id="rfc.section.A.p.1">Chris Peterson did much of the initial investigation and work for this.  See <span>&lt;</span><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1160368">https://bugzilla.mozilla.org/show_bug.cgi?id=1160368</a><span>&gt;</span> for details.</p>
+<p id="rfc.section.A.p.1">Henri Sivonen first suggested that non-Secure cookies be made ephemeral.  Chris Peterson did much of the initial investigation and work.  See <span>&lt;</span><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1160368">https://bugzilla.mozilla.org/show_bug.cgi?id=1160368</a><span>&gt;</span> for details.</p>
 <h1 id="rfc.authors">
-  <a href="#rfc.authors">Author's Address</a>
+  <a href="#rfc.authors">Authors' Addresses</a>
 </h1>
 <div class="avoidbreak">
   <address class="vcard">
@@ -443,6 +443,27 @@ li, p {
 	  <span class="country-name vcardline"></span>
 	</span>
 	<span class="vcardline">EMail: <a href="mailto:martin.thomson@gmail.com">martin.thomson@gmail.com</a></span>
+
+  </address>
+</div><div class="avoidbreak">
+  <address class="vcard">
+	<span class="vcardline">
+	  <span class="fn">Chris Peterson</span> 
+	  <span class="n hidden">
+		<span class="family-name">Peterson</span>
+	  </span>
+	</span>
+	<span class="org vcardline">Mozilla</span>
+	<span class="adr">
+	  
+	  <span class="vcardline">
+		<span class="locality"></span> 
+		<span class="region"></span>
+		<span class="code"></span>
+	  </span>
+	  <span class="country-name vcardline"></span>
+	</span>
+	<span class="vcardline">EMail: <a href="mailto:cpeterson@mozilla.com">cpeterson@mozilla.com</a></span>
 
   </address>
 </div>

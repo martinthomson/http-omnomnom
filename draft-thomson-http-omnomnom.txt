@@ -3,9 +3,9 @@
 
 
 Network Working Group                                         M. Thomson
-Internet-Draft                                                   Mozilla
-Intended status: Standards Track                            May 12, 2016
-Expires: November 13, 2016
+Internet-Draft                                               C. Peterson
+Intended status: Standards Track                                 Mozilla
+Expires: November 13, 2016                                  May 12, 2016
 
 
                 Expiring Aggressively Those HTTP Cookies
@@ -53,7 +53,7 @@ Copyright Notice
 
 
 
-Thomson                 Expires November 13, 2016               [Page 1]
+Thomson & Peterson      Expires November 13, 2016               [Page 1]
 
 Internet-Draft              EAT HTTP Cookies                    May 2016
 
@@ -69,7 +69,7 @@ Table of Contents
      5.1.  Normative References  . . . . . . . . . . . . . . . . . .   3
      5.2.  Informative References  . . . . . . . . . . . . . . . . .   4
    Appendix A.  Acknowledgements . . . . . . . . . . . . . . . . . .   4
-   Author's Address  . . . . . . . . . . . . . . . . . . . . . . . .   4
+   Authors' Addresses  . . . . . . . . . . . . . . . . . . . . . . .   4
 
 1.  Introduction
 
@@ -97,9 +97,9 @@ Table of Contents
 2.  Expire Cookies
 
    Cookies that are set using insecure channels (i.e., HTTP over
-   cleartext TCP), MUST be given shorter expiration times than the time
-   requested.  For instance, these cookies might only persist until the
-   user closes their browser.
+   cleartext TCP), MUST have a short time limit on the time that they
+   are persisted.  For instance, such cookies might only persist until
+   the user closes their browser.
 
    If a user agent detects a change in network conditions it SHOULD
    remove any cookies that were established using insecure channels.
@@ -109,7 +109,7 @@ Table of Contents
 
 
 
-Thomson                 Expires November 13, 2016               [Page 2]
+Thomson & Peterson      Expires November 13, 2016               [Page 2]
 
 Internet-Draft              EAT HTTP Cookies                    May 2016
 
@@ -122,6 +122,11 @@ Internet-Draft              EAT HTTP Cookies                    May 2016
 
    o  This change might be limited to cookies that are set in third-
       party contexts.  See [I-D.west-first-party-cookies].
+
+      Limiting access to third-party cookies in this fashion could have
+      the secondary effect of encouraging providers of third-party
+      content to move to HTTPS.  This removes that content as a barrier
+      to the adoption of HTTPS for the sites that include that content.
 
 3.  Security Considerations
 
@@ -156,19 +161,19 @@ Internet-Draft              EAT HTTP Cookies                    May 2016
               DOI 10.17487/RFC6265, April 2011,
               <http://www.rfc-editor.org/info/rfc6265>.
 
+
+
+
+
+Thomson & Peterson      Expires November 13, 2016               [Page 3]
+
+Internet-Draft              EAT HTTP Cookies                    May 2016
+
+
    [RFC7230]  Fielding, R., Ed. and J. Reschke, Ed., "Hypertext Transfer
               Protocol (HTTP/1.1): Message Syntax and Routing",
               RFC 7230, DOI 10.17487/RFC7230, June 2014,
               <http://www.rfc-editor.org/info/rfc7230>.
-
-
-
-
-
-Thomson                 Expires November 13, 2016               [Page 3]
-
-Internet-Draft              EAT HTTP Cookies                    May 2016
-
 
 5.2.  Informative References
 
@@ -182,11 +187,12 @@ Internet-Draft              EAT HTTP Cookies                    May 2016
 
 Appendix A.  Acknowledgements
 
-   Chris Peterson did much of the initial investigation and work for
-   this.  See <https://bugzilla.mozilla.org/show_bug.cgi?id=1160368> for
+   Henri Sivonen first suggested that non-Secure cookies be made
+   ephemeral.  Chris Peterson did much of the initial investigation and
+   work.  See <https://bugzilla.mozilla.org/show_bug.cgi?id=1160368> for
    details.
 
-Author's Address
+Authors' Addresses
 
    Martin Thomson
    Mozilla
@@ -194,6 +200,10 @@ Author's Address
    Email: martin.thomson@gmail.com
 
 
+   Chris Peterson
+   Mozilla
+
+   Email: cpeterson@mozilla.com
 
 
 
@@ -211,14 +221,4 @@ Author's Address
 
 
 
-
-
-
-
-
-
-
-
-
-
-Thomson                 Expires November 13, 2016               [Page 4]
+Thomson & Peterson      Expires November 13, 2016               [Page 4]
