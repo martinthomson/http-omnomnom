@@ -36,7 +36,7 @@ informative:
 
 --- abstract
 
-HTTP Cookies that are sent over connections without confidentiality and
+HTTP cookies that are sent over connections without confidentiality and
 integrity protection are vulnerable to theft.  Such cookies should be expired
 aggressively.
 
@@ -68,7 +68,7 @@ interpreted as described in [RFC2119].
 
 # Expire Cookies
 
-Cookies that are set using insecure channels (i.e., HTTP over cleartext TCP),
+Cookies that are set using insecure channels (i.e., HTTP over cleartext TCP)
 MUST have a short time limit on the time that they are persisted.   For
 instance, such cookies might only persist until the user closes their browser.
 
