@@ -5,7 +5,7 @@
 Network Working Group                                         M. Thomson
 Internet-Draft                                               C. Peterson
 Intended status: Standards Track                                 Mozilla
-Expires: November 13, 2016                                  May 12, 2016
+Expires: November 14, 2016                                  May 13, 2016
 
 
                 Expiring Aggressively Those HTTP Cookies
@@ -13,7 +13,7 @@ Expires: November 13, 2016                                  May 12, 2016
 
 Abstract
 
-   HTTP Cookies that are sent over connections without confidentiality
+   HTTP cookies that are sent over connections without confidentiality
    and integrity protection are vulnerable to theft.  Such cookies
    should be expired aggressively.
 
@@ -32,7 +32,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on November 13, 2016.
+   This Internet-Draft will expire on November 14, 2016.
 
 Copyright Notice
 
@@ -53,7 +53,7 @@ Copyright Notice
 
 
 
-Thomson & Peterson      Expires November 13, 2016               [Page 1]
+Thomson & Peterson      Expires November 14, 2016               [Page 1]
 
 Internet-Draft              EAT HTTP Cookies                    May 2016
 
@@ -97,9 +97,9 @@ Table of Contents
 2.  Expire Cookies
 
    Cookies that are set using insecure channels (i.e., HTTP over
-   cleartext TCP), MUST have a short time limit on the time that they
-   are persisted.  For instance, such cookies might only persist until
-   the user closes their browser.
+   cleartext TCP) MUST have a short time limit on the time that they are
+   persisted.  For instance, such cookies might only persist until the
+   user closes their browser.
 
    If a user agent detects a change in network conditions it SHOULD
    remove any cookies that were established using insecure channels.
@@ -109,7 +109,7 @@ Table of Contents
 
 
 
-Thomson & Peterson      Expires November 13, 2016               [Page 2]
+Thomson & Peterson      Expires November 14, 2016               [Page 2]
 
 Internet-Draft              EAT HTTP Cookies                    May 2016
 
@@ -165,7 +165,7 @@ Internet-Draft              EAT HTTP Cookies                    May 2016
 
 
 
-Thomson & Peterson      Expires November 13, 2016               [Page 3]
+Thomson & Peterson      Expires November 14, 2016               [Page 3]
 
 Internet-Draft              EAT HTTP Cookies                    May 2016
 
@@ -221,4 +221,4 @@ Authors' Addresses
 
 
 
-Thomson & Peterson      Expires November 13, 2016               [Page 4]
+Thomson & Peterson      Expires November 14, 2016               [Page 4]
